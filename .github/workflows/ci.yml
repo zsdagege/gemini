@@ -32,7 +32,7 @@ jobs:
           node-version: "22"
 
       - name: Check Deno entry point
-        run: deno check src/deno_index.ts
+        run: deno check --node-modules-dir=auto src/deno_index.ts
 
       - name: Check API proxy worker syntax
         run: node --check src/api_proxy/worker.mjs
