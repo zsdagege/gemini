@@ -12,7 +12,7 @@ Use this workflow for all code changes in this repository.
 6. Run the repository checks before opening or updating a pull request:
 
    ```bash
-   deno check src/deno_index.ts
+   deno check --node-modules-dir=auto src/deno_index.ts
    node --check src/api_proxy/worker.mjs
    node --input-type=module --check < src/index.js
    ```
